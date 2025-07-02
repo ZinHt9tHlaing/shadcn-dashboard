@@ -31,9 +31,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex items-start justify-between`}
       >
         <SideBar />
-        <main className="w-full h-full grid">
+        <main
+          className=" h-full grid"
+          style={{ width: "calc(100% - 300px)" }}
+        >
           <Header />
-          {children}
+          <div className="p-2">{children}</div>
         </main>
       </body>
     </html>
